@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="./jquery.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			$(() => {
+				setInterval(() => {
+					$.get( "read.html", function( data ) {
+						$('#data').text(data)
+					})
+				})
+				,
+				500
+			})
+
+			write_tag = (tag, value) => {
+				var data = escape(tag) + '=' + value
+				$.post("write.html", data)
+			}
+		</script>
+
+		<title>S7 Web Test</title>
+	</head>
+
+	<body>
+		<h1>S7 Web Test</h1>
+
+		<div id="data">
+		</div>
+	</body>
+</html>
