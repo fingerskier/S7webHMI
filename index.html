@@ -1,32 +1,69 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="./jquery.js" type="text/javascript"></script>
+		<script type="text/javascript" src="jquery.js"></script>
 
-		<script type="text/javascript">
-			$(() => {
-				setInterval(() => {
-					$.get( "read.html", function( data ) {
-						$('#data').text(data)
-					})
-				})
-				,
-				500
-			})
+		<script type="text/javascript" src="index.js"></script>
 
-			write_tag = (tag, value) => {
-				var data = escape(tag) + '=' + value
-				$.post("write.html", data)
-			}
-		</script>
+		<!-- <link rel="shortcut icon" href="images/favicon.png" /> -->
 
-		<title>S7 Web Test</title>
+		<title>S7 Web HMI</title>
 	</head>
 
 	<body>
-		<h1>S7 Web Test</h1>
+		<h1>S7 Web HMI</h1>
+		<hr>
+		<table id="tags"></table>
+		<hr>
+		<form action="write.html" id="tag_updates" method="POST">
+			<table>
+				<tr>
+					<td>Pressure #1</td>
+					<td>
+						<input name="PT1" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<td>Pressure #2</td>
+					<td>
+						<input name="PT2" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<td>Temperature #1</td>
+					<td>
+						<input name="TT1" type="text" />
+					</td>
+				</tr>
+				</tr>
+				<tr>
+					<td>Temperature #2</td>
+					<td>
+						<input name="TT2" type="text" />
+					</td>
+				</tr>
+				</tr>
+				<tr>
+					<td>Flow</td>
+					<td>
+						<input name="FQ1" type="text" />
+					</td>
+				</tr>
+			</table>
 
-		<div id="data">
-		</div>
+			<button type="submit">Update Values</button>
+		</form>
+		<hr>
+		<table id="statuses">
+			<tr>
+				<th>Connection Status</th>
+				<th>Response</th>
+			</tr>
+
+			<tr>
+				<td id="conn_status"></td>
+				<td id="ajax_response"></td>
+			</tr>
+		</table>
 	</body>
 </html>

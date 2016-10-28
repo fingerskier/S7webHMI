@@ -1,0 +1,12 @@
+{
+	 "Upper_Pressure" : ":="IO".Upper_Pressure:"
+	,"Upper_Pressure_Fault" : ":="IO".Upper_Pressure_Fault:"
+	,"Lower_Pressure" : ":="IO".Lower_Pressure:"
+	,"Lower_Pressure_Fault" : ":="IO".Lower_Pressure_Fault:"
+	,"Wellbore_Temperature" : ":="IO".Wellbore_Temperature:"
+	,"Wellbore_Temperature_Fault" : ":="IO".Wellbore_Temperature_Fault:"
+	,"Ambient_Temperature" : ":="IO".Ambient_Temperature:"
+	,"Ambient_Temperature_Fault" : ":="IO".Ambient_Temperature_Fault:"
+	,"Flow" : ":="IO".Flow:"
+	,"Flow_Fault" : ":="IO".Flow_Fault:"
+}
