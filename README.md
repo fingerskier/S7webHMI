@@ -13,7 +13,7 @@ Includes:
 
 
 Usage:
-index.html | Modify as needed to reflect your needs.  As is this app will pull and display data by name.  Writing data takes a little more work.
-index.js | You shouldn't need to edit this unless you want a custom data view.
-data.json | Edit your tags in here: the names are simply keys that you can use in your javascript; the values must be formatted for the PLC to update them when accessed.
-write.html | The form in index.html would need to have the input elements named _exactly_ as the PLC tag-names.  Those _exact_ same names need to be installed here.
+- `index.html` Modify as needed to customize the UI.  As is: this app will pull and display data by name.  Writing data takes a little more work.
+- `index.js` You shouldn't need to edit this.
+- `data.json` Edit your tags in here: the names are simply keys that you can use in your javascript; the values must be formatted specifically for the PLC to recognize them.
+- `write.html` The submitting form in index.html needs to have the input elements named _exactly_ as the PLC tag-names.  Those _exact_ same names need to be installed here.
